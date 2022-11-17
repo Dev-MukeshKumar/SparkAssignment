@@ -1,26 +1,30 @@
-22/11/17 10:13:08 INFO Credits$: Starting credits app.
-22/11/17 10:13:12 INFO Credits$: Count of data records: 1000
-22/11/17 10:13:12 INFO Credits$: Max credit score in each state:
-22/11/17 10:13:12 INFO Credits$: (8,150)
-22/11/17 10:13:12 INFO Credits$: (1,149)
-22/11/17 10:13:12 INFO Credits$: (9,150)
-22/11/17 10:13:12 INFO Credits$: (10,150)
-22/11/17 10:13:12 INFO Credits$: (2,150)
-22/11/17 10:13:12 INFO Credits$: (3,149)
-22/11/17 10:13:12 INFO Credits$: (4,149)
-22/11/17 10:13:12 INFO Credits$: (5,148)
-22/11/17 10:13:12 INFO Credits$: (6,150)
-22/11/17 10:13:12 INFO Credits$: (7,150)
-22/11/17 10:13:12 INFO Credits$: Count of credit score > 100: 473
-22/11/17 10:13:12 INFO Credits$: samples of 2x credit scores:
-22/11/17 10:13:12 INFO Credits$: RecordSchema(1,100,ifgyc,1,232,false)
-22/11/17 10:13:12 INFO Credits$: RecordSchema(2,101,pvpvi,2,134,true)
-22/11/17 10:13:12 INFO Credits$: RecordSchema(3,102,wmxni,3,192,false)
-22/11/17 10:13:12 INFO Credits$: RecordSchema(4,103,jegav,4,190,false)
-22/11/17 10:13:12 INFO Credits$: RecordSchema(5,104,oewuh,5,134,false)
-22/11/17 10:13:12 INFO Credits$: RecordSchema(6,105,jqppd,6,216,false)
-22/11/17 10:13:12 INFO Credits$: RecordSchema(7,106,ogfwo,7,166,true)
-22/11/17 10:13:12 INFO Credits$: RecordSchema(8,107,lvnvn,8,106,false)
-22/11/17 10:13:12 INFO Credits$: RecordSchema(9,108,mwmcr,9,290,true)
-22/11/17 10:13:12 INFO Credits$: RecordSchema(10,109,mkzoo,10,274,true)
-22/11/17 10:13:12 INFO Credits$: Shutting down credits app.
+22/11/17 12:40:40 INFO Credits$: Starting credits app.
+22/11/17 12:40:42 INFO Credits$: RDD of case class Schema:
+22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(9,108,aqhrc,9,69,false)
+22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(4,103,nnwfe,4,111,false)
+22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(1,100,sclij,1,91,true)
+22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(8,107,pbrjw,8,136,true)
+22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(6,105,lygas,6,88,false)
+22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(2,101,gcxep,2,126,true)
+22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(7,106,twyvr,7,122,false)
+22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(3,102,hgzpf,3,83,true)
+22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(5,104,ehhzq,5,102,false)
+22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(10,109,khxlh,10,89,true)
+22/11/17 12:40:43 INFO Credits$: ----------------------------------------------------------------
+22/11/17 12:40:43 INFO Credits$: RDD of class Schema:
+22/11/17 12:40:43 INFO Credits$: RecordClassSchema(1,100,udadz,1,61,false)
+22/11/17 12:40:43 INFO Credits$: RecordClassSchema(9,108,ngzbn,9,101,false)
+22/11/17 12:40:43 INFO Credits$: RecordClassSchema(6,105,bhxqq,6,76,true)
+22/11/17 12:40:43 INFO Credits$: RecordClassSchema(4,103,cqtyj,4,92,true)
+22/11/17 12:40:43 INFO Credits$: RecordClassSchema(3,102,wczqx,3,125,true)
+22/11/17 12:40:43 INFO Credits$: RecordClassSchema(8,107,atcfn,8,86,true)
+22/11/17 12:40:43 INFO Credits$: RecordClassSchema(2,101,zzodg,2,127,false)
+22/11/17 12:40:43 INFO Credits$: RecordClassSchema(7,106,rsgtg,7,61,false)
+22/11/17 12:40:43 INFO Credits$: RecordClassSchema(5,104,irwqh,5,95,true)
+22/11/17 12:40:43 INFO Credits$: RecordClassSchema(10,109,uxwan,10,103,false)
+22/11/17 12:40:43 INFO Credits$: ----------------------------------------------------------------
+22/11/17 12:40:45 INFO Credits$: DF of credits showed in console:
+22/11/17 12:40:45 INFO Credits$: ----------------------------------------------------------------
+22/11/17 12:40:45 INFO Credits$: Ds of credits showed in console:
+22/11/17 12:40:46 INFO Credits$: ----------------------------------------------------------------
+22/11/17 12:40:46 INFO Credits$: Shutting down credits app.

@@ -1,9 +1,9 @@
 package com.credits
 
-import org.apache.spark.sql.SparkSession
-import data.generate.GenerateData._
-import data.generate.RecordSchema
-import org.apache.spark.SparkConf
+import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
+import data._
+import data.GenerateData.getData
+import org.apache.spark.{SparkConf, sql}
 import org.apache.log4j.Logger
 import org.apache.spark.rdd.RDD
 
@@ -20,19 +20,30 @@ object Credits extends Serializable{
 
     val spark = SparkSession.builder().config(getSparkConf()).getOrCreate()
 
-    //dataset creation
-    val creditsRdd = getCreditsRdd(spark)
+    //a RDD of case class
+    val creditsRddOfCaseClass = getCreditsRddCaseClassSchema(spark)
+    logger.info("RDD of case class Schema:")
+    creditsRddOfCaseClass.foreach(logger.info(_))
+    logger.info("----------------------------------------------------------------")
 
-    logger.info("Count of data records: "+getCountOfRecords(creditsRdd))
+    //a RDD of case class
+    val creditsRddOfClass = getCreditsRddClassSchema(spark)
+    logger.info("RDD of class Schema:")
+    creditsRddOfClass.foreach(data => logger.info(display(data)))
+    logger.info("----------------------------------------------------------------")
 
-    getMaxCreditsScoreInEachState(creditsRdd)
+    //a DataFrame
+    val creditsDf = getCreditsDf(spark)
+    logger.info("DF of credits showed in console:")
+    creditsDf.filter("creditScore > 130").show()
+    logger.info("----------------------------------------------------------------")
 
-    logger.info("Count of credit score > 100: "+countOfCreditScoreGreaterThan100(creditsRdd))
+    //a DataSet of case class
+    val creditsDs = getCreditsDs(spark)
+    logger.info("Ds of credits showed in console:")
+    creditsDs.filter(row => row.creditScore>130).show()
+    logger.info("----------------------------------------------------------------")
 
-    logger.info("samples of 2x credit scores:")
-    increaseCreditsScoreBy2x(creditsRdd).take(10).foreach(logger.info(_))
-
-    creditsRdd.unpersist()
     spark.stop()
     logger.info("Shutting down credits app.")
   }
@@ -45,17 +56,18 @@ object Credits extends Serializable{
     sparkConf
   }
 
-  def getCreditsRdd(spark: SparkSession): RDD[RecordSchema] = spark.sparkContext.parallelize(getData(1000))
+  //data parallelize and readers
+  def getCreditsRddCaseClassSchema(spark: SparkSession): RDD[RecordCaseClassSchema] = spark.sparkContext.parallelize(getData(10)).map(row => RecordCaseClassSchema(row._1,row._2,row._3,row._4,row._5,row._6))
 
-  def getCountOfRecords(rdd:RDD[RecordSchema]): Long = rdd.count()
+  def getCreditsRddClassSchema(spark: SparkSession): RDD[RecordClassSchema] = spark.sparkContext.parallelize(getData(10)).map(row => new RecordClassSchema(row._1,row._2,row._3,row._4,row._5,row._6))
 
-  def getMaxCreditsScoreInEachState(rdd:RDD[RecordSchema]):Unit ={
-    logger.info("Max credit score in each state:")
-    rdd.map(data => (data.stateCode,data.creditScore)).reduceByKey((x,y) => x max y).collect().foreach(data => logger.info(data))
+  def getCreditsDf(session: SparkSession): Dataset[Row] = session.sqlContext.createDataFrame(getData(10)).toDF("stateCode", "bankId", "areaName", "accountId", "creditScore", "hasCreditCard")
+
+  def getCreditsDs(session: SparkSession): Dataset[RecordCaseClassSchema] = {
+    import session.implicits._
+    session.sqlContext.createDataFrame(getData(10)).toDF("stateCode", "bankId", "areaName", "accountId", "creditScore", "hasCreditCard").as[RecordCaseClassSchema]
   }
 
-  def countOfCreditScoreGreaterThan100(rdd:RDD[RecordSchema]):Long = rdd.filter(x => x.creditScore > 100).count()
-
-  def increaseCreditsScoreBy2x(rdd: RDD[RecordSchema]):RDD[RecordSchema] = rdd.map(data => RecordSchema(data.stateCode, data.bankId, data.areaName,data.accountId,data.creditScore * 2,data.hasCreditCard))
-
+  //utility functions
+  def display(record: RecordClassSchema) = s"RecordClassSchema(${record.stateCode},${record.bankId},${record.areaName},${record.accountId},${record.creditScore},${record.hasCreditCard})"
 }
