@@ -1,30 +1,20 @@
-22/11/17 12:40:40 INFO Credits$: Starting credits app.
-22/11/17 12:40:42 INFO Credits$: RDD of case class Schema:
-22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(9,108,aqhrc,9,69,false)
-22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(4,103,nnwfe,4,111,false)
-22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(1,100,sclij,1,91,true)
-22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(8,107,pbrjw,8,136,true)
-22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(6,105,lygas,6,88,false)
-22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(2,101,gcxep,2,126,true)
-22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(7,106,twyvr,7,122,false)
-22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(3,102,hgzpf,3,83,true)
-22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(5,104,ehhzq,5,102,false)
-22/11/17 12:40:43 INFO Credits$: RecordCaseClassSchema(10,109,khxlh,10,89,true)
-22/11/17 12:40:43 INFO Credits$: ----------------------------------------------------------------
-22/11/17 12:40:43 INFO Credits$: RDD of class Schema:
-22/11/17 12:40:43 INFO Credits$: RecordClassSchema(1,100,udadz,1,61,false)
-22/11/17 12:40:43 INFO Credits$: RecordClassSchema(9,108,ngzbn,9,101,false)
-22/11/17 12:40:43 INFO Credits$: RecordClassSchema(6,105,bhxqq,6,76,true)
-22/11/17 12:40:43 INFO Credits$: RecordClassSchema(4,103,cqtyj,4,92,true)
-22/11/17 12:40:43 INFO Credits$: RecordClassSchema(3,102,wczqx,3,125,true)
-22/11/17 12:40:43 INFO Credits$: RecordClassSchema(8,107,atcfn,8,86,true)
-22/11/17 12:40:43 INFO Credits$: RecordClassSchema(2,101,zzodg,2,127,false)
-22/11/17 12:40:43 INFO Credits$: RecordClassSchema(7,106,rsgtg,7,61,false)
-22/11/17 12:40:43 INFO Credits$: RecordClassSchema(5,104,irwqh,5,95,true)
-22/11/17 12:40:43 INFO Credits$: RecordClassSchema(10,109,uxwan,10,103,false)
-22/11/17 12:40:43 INFO Credits$: ----------------------------------------------------------------
-22/11/17 12:40:45 INFO Credits$: DF of credits showed in console:
-22/11/17 12:40:45 INFO Credits$: ----------------------------------------------------------------
-22/11/17 12:40:45 INFO Credits$: Ds of credits showed in console:
-22/11/17 12:40:46 INFO Credits$: ----------------------------------------------------------------
-22/11/17 12:40:46 INFO Credits$: Shutting down credits app.
+22/11/17 14:44:00 INFO Credits$: Starting credits app.
+22/11/17 14:44:04 INFO Credits$: Converting DF to DS
+22/11/17 14:44:05 INFO Credits$: DF to DS converted
+22/11/17 14:44:05 INFO Credits$: Converting DS to RDD
+22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(9,108,pttuz,9,70,false)
+22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(1,100,fvatt,1,57,true)
+22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(4,103,dedfj,4,57,false)
+22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(3,102,rmehh,3,112,false)
+22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(2,101,pruig,2,116,false)
+22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(8,107,utjfw,8,92,true)
+22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(6,105,hwzwy,6,76,false)
+22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(5,104,xdihl,5,51,false)
+22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(7,106,conrt,7,138,false)
+22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(10,109,vtwlu,10,69,true)
+22/11/17 14:44:06 INFO Credits$: DS to RDD converted
+22/11/17 14:44:06 INFO Credits$: Converting RDD to DS
+22/11/17 14:44:06 INFO Credits$: Converted RDD to DS
+22/11/17 14:44:06 INFO Credits$: Converting RDD to DF
+22/11/17 14:44:06 INFO Credits$: Converted RDD to DF
+22/11/17 14:44:06 INFO Credits$: Shutting down credits app.
