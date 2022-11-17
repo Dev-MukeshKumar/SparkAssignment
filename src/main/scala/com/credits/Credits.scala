@@ -23,7 +23,6 @@ object Credits extends Serializable{
     //dataset creation
     val creditsRdd = getCreditsRdd(spark)
 
-
     logger.info("Count of data records: "+getCountOfRecords(creditsRdd))
 
     getMaxCreditsScoreInEachState(creditsRdd)
