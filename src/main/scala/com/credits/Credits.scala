@@ -23,11 +23,12 @@ object Credits extends Serializable{
     //dataset creation
     val creditsRdd = getCreditsRdd(spark)
 
-    logger.info(getCountOfRecords(creditsRdd))
+
+    logger.info("Count of data records: "+getCountOfRecords(creditsRdd))
 
     getMaxCreditsScoreInEachState(creditsRdd)
 
-    logger.info(countOfCreditScoreGreaterThan100(creditsRdd))
+    logger.info("Count of credit score > 100: "+countOfCreditScoreGreaterThan100(creditsRdd))
 
     logger.info("samples of 2x credit scores:")
     increaseCreditsScoreBy2x(creditsRdd).take(10).foreach(logger.info(_))
@@ -49,7 +50,10 @@ object Credits extends Serializable{
 
   def getCountOfRecords(rdd:RDD[RecordSchema]): Long = rdd.count()
 
-  def getMaxCreditsScoreInEachState(rdd:RDD[RecordSchema]):Unit = rdd.map(data => (data.stateCode,data.creditScore)).reduceByKey((x,y) => x max y).collect().foreach(data => logger.info(data))
+  def getMaxCreditsScoreInEachState(rdd:RDD[RecordSchema]):Unit ={
+    logger.info("Max credit score in each state:")
+    rdd.map(data => (data.stateCode,data.creditScore)).reduceByKey((x,y) => x max y).collect().foreach(data => logger.info(data))
+  }
 
   def countOfCreditScoreGreaterThan100(rdd:RDD[RecordSchema]):Long = rdd.filter(x => x.creditScore > 100).count()
 

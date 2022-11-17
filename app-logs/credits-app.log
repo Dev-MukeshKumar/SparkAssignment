@@ -1,25 +1,26 @@
-22/11/16 19:19:52 INFO Credits$: Starting credits app.
-22/11/16 19:19:55 INFO Credits$: 1000
-22/11/16 19:19:56 INFO Credits$: (8,150)
-22/11/16 19:19:56 INFO Credits$: (1,150)
-22/11/16 19:19:56 INFO Credits$: (9,150)
-22/11/16 19:19:56 INFO Credits$: (10,149)
-22/11/16 19:19:56 INFO Credits$: (2,148)
-22/11/16 19:19:56 INFO Credits$: (3,150)
-22/11/16 19:19:56 INFO Credits$: (4,150)
-22/11/16 19:19:56 INFO Credits$: (5,150)
-22/11/16 19:19:56 INFO Credits$: (6,150)
-22/11/16 19:19:56 INFO Credits$: (7,150)
-22/11/16 19:19:56 INFO Credits$: 524
-22/11/16 19:19:56 INFO Credits$: samples of 2x credit scores:
-22/11/16 19:19:56 INFO Credits$: RecordSchema(1,100,agnrz,1,140,false)
-22/11/16 19:19:56 INFO Credits$: RecordSchema(2,101,chmoo,2,248,false)
-22/11/16 19:19:56 INFO Credits$: RecordSchema(3,102,gwvii,3,144,true)
-22/11/16 19:19:56 INFO Credits$: RecordSchema(4,103,xgyyy,4,146,true)
-22/11/16 19:19:56 INFO Credits$: RecordSchema(5,104,jjvyg,5,262,true)
-22/11/16 19:19:56 INFO Credits$: RecordSchema(6,105,vqhjn,6,186,true)
-22/11/16 19:19:56 INFO Credits$: RecordSchema(7,106,psrhp,7,104,false)
-22/11/16 19:19:56 INFO Credits$: RecordSchema(8,107,jzgpl,8,192,true)
-22/11/16 19:19:56 INFO Credits$: RecordSchema(9,108,ysney,9,176,true)
-22/11/16 19:19:56 INFO Credits$: RecordSchema(10,109,ybdwz,10,148,true)
-22/11/16 19:19:56 INFO Credits$: Shutting down credits app.
+22/11/17 10:13:08 INFO Credits$: Starting credits app.
+22/11/17 10:13:12 INFO Credits$: Count of data records: 1000
+22/11/17 10:13:12 INFO Credits$: Max credit score in each state:
+22/11/17 10:13:12 INFO Credits$: (8,150)
+22/11/17 10:13:12 INFO Credits$: (1,149)
+22/11/17 10:13:12 INFO Credits$: (9,150)
+22/11/17 10:13:12 INFO Credits$: (10,150)
+22/11/17 10:13:12 INFO Credits$: (2,150)
+22/11/17 10:13:12 INFO Credits$: (3,149)
+22/11/17 10:13:12 INFO Credits$: (4,149)
+22/11/17 10:13:12 INFO Credits$: (5,148)
+22/11/17 10:13:12 INFO Credits$: (6,150)
+22/11/17 10:13:12 INFO Credits$: (7,150)
+22/11/17 10:13:12 INFO Credits$: Count of credit score > 100: 473
+22/11/17 10:13:12 INFO Credits$: samples of 2x credit scores:
+22/11/17 10:13:12 INFO Credits$: RecordSchema(1,100,ifgyc,1,232,false)
+22/11/17 10:13:12 INFO Credits$: RecordSchema(2,101,pvpvi,2,134,true)
+22/11/17 10:13:12 INFO Credits$: RecordSchema(3,102,wmxni,3,192,false)
+22/11/17 10:13:12 INFO Credits$: RecordSchema(4,103,jegav,4,190,false)
+22/11/17 10:13:12 INFO Credits$: RecordSchema(5,104,oewuh,5,134,false)
+22/11/17 10:13:12 INFO Credits$: RecordSchema(6,105,jqppd,6,216,false)
+22/11/17 10:13:12 INFO Credits$: RecordSchema(7,106,ogfwo,7,166,true)
+22/11/17 10:13:12 INFO Credits$: RecordSchema(8,107,lvnvn,8,106,false)
+22/11/17 10:13:12 INFO Credits$: RecordSchema(9,108,mwmcr,9,290,true)
+22/11/17 10:13:12 INFO Credits$: RecordSchema(10,109,mkzoo,10,274,true)
+22/11/17 10:13:12 INFO Credits$: Shutting down credits app.
