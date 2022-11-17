@@ -1,20 +1,42 @@
-22/11/17 14:44:00 INFO Credits$: Starting credits app.
-22/11/17 14:44:04 INFO Credits$: Converting DF to DS
-22/11/17 14:44:05 INFO Credits$: DF to DS converted
-22/11/17 14:44:05 INFO Credits$: Converting DS to RDD
-22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(9,108,pttuz,9,70,false)
-22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(1,100,fvatt,1,57,true)
-22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(4,103,dedfj,4,57,false)
-22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(3,102,rmehh,3,112,false)
-22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(2,101,pruig,2,116,false)
-22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(8,107,utjfw,8,92,true)
-22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(6,105,hwzwy,6,76,false)
-22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(5,104,xdihl,5,51,false)
-22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(7,106,conrt,7,138,false)
-22/11/17 14:44:06 INFO Credits$: RecordCaseClassSchema(10,109,vtwlu,10,69,true)
-22/11/17 14:44:06 INFO Credits$: DS to RDD converted
-22/11/17 14:44:06 INFO Credits$: Converting RDD to DS
-22/11/17 14:44:06 INFO Credits$: Converted RDD to DS
-22/11/17 14:44:06 INFO Credits$: Converting RDD to DF
-22/11/17 14:44:06 INFO Credits$: Converted RDD to DF
-22/11/17 14:44:06 INFO Credits$: Shutting down credits app.
+22/11/17 17:44:14 INFO Credits$: Starting credits app.
+22/11/17 17:44:17 INFO Credits$: Inner join of 2 RDD:
+22/11/17 17:44:17 INFO Credits$: (New york,((5001,James Hoog,New york,0.15),(3002,Nick Rimando,New york,100,5001)))
+22/11/17 17:44:17 INFO Credits$: (Paris,((5002,Nail Knite,Paris,0.13),(3004,Fabian Johnson,Paris,300,5006)))
+22/11/17 17:44:17 INFO Credits$: (London,((5005,Pit Alex,London,0.11),(3008,Julian Green,London,300,5002)))
+22/11/17 17:44:17 INFO Credits$: (Paris,((5006,Mc Lyon,Paris,0.14),(3004,Fabian Johnson,Paris,300,5006)))
+22/11/17 17:44:17 INFO Credits$: (New york,((5001,James Hoog,New york,0.15),(3007,Brad Davis,New york,200,5001)))
+22/11/17 17:44:17 INFO Credits$: --------------------------------------------------------
+22/11/17 17:44:17 INFO Credits$: Left outer join of 2 RDD:
+22/11/17 17:44:17 INFO Credits$: (Rome,((5007,Paul Adam,Rome,0.16),None))
+22/11/17 17:44:17 INFO Credits$: (Paris,((5002,Nail Knite,Paris,0.13),Some((3004,Fabian Johnson,Paris,300,5006))))
+22/11/17 17:44:17 INFO Credits$: (Paris,((5006,Mc Lyon,Paris,0.14),Some((3004,Fabian Johnson,Paris,300,5006))))
+22/11/17 17:44:17 INFO Credits$: (San Jose,((5009,Lauson Hen,San Jose,0.12),None))
+22/11/17 17:44:17 INFO Credits$: (New york,((5001,James Hoog,New york,0.15),Some((3002,Nick Rimando,New york,100,5001))))
+22/11/17 17:44:17 INFO Credits$: (New york,((5001,James Hoog,New york,0.15),Some((3007,Brad Davis,New york,200,5001))))
+22/11/17 17:44:17 INFO Credits$: (London,((5005,Pit Alex,London,0.11),Some((3008,Julian Green,London,300,5002))))
+22/11/17 17:44:17 INFO Credits$: --------------------------------------------------------
+22/11/17 17:44:19 INFO Credits$: inner join 2DF
+22/11/17 17:44:20 INFO Credits$: [Pit Alex,Julian Green]
+22/11/17 17:44:20 INFO Credits$: [Mc Lyon,Fabian Johnson]
+22/11/17 17:44:20 INFO Credits$: [James Hoog,Brad Davis]
+22/11/17 17:44:20 INFO Credits$: [James Hoog,Nick Rimando]
+22/11/17 17:44:20 INFO Credits$: [Nail Knite,Fabian Johnson]
+22/11/17 17:44:20 INFO Credits$: --------------------------------------------------------
+22/11/17 17:44:20 INFO Credits$: inner join 2DF
+22/11/17 17:44:20 INFO Credits$: [Pit Alex,Julian Green]
+22/11/17 17:44:20 INFO Credits$: [James Hoog,Brad Davis]
+22/11/17 17:44:20 INFO Credits$: [James Hoog,Nick Rimando]
+22/11/17 17:44:20 INFO Credits$: [Mc Lyon,Fabian Johnson]
+22/11/17 17:44:20 INFO Credits$: [Nail Knite,Fabian Johnson]
+22/11/17 17:44:20 INFO Credits$: --------------------------------------------------------
+22/11/17 17:44:20 INFO Credits$: right join 2DF
+22/11/17 17:44:20 INFO Credits$: [null,Graham Zusi]
+22/11/17 17:44:20 INFO Credits$: [null,Geoff Cameron]
+22/11/17 17:44:20 INFO Credits$: [James Hoog,Nick Rimando]
+22/11/17 17:44:20 INFO Credits$: [James Hoog,Brad Davis]
+22/11/17 17:44:20 INFO Credits$: [null,Jozy Altidor]
+22/11/17 17:44:20 INFO Credits$: [Mc Lyon,Fabian Johnson]
+22/11/17 17:44:20 INFO Credits$: [Pit Alex,Julian Green]
+22/11/17 17:44:20 INFO Credits$: [Nail Knite,Fabian Johnson]
+22/11/17 17:44:20 INFO Credits$: --------------------------------------------------------
+22/11/17 17:44:20 INFO Credits$: Shutting down credits app.
