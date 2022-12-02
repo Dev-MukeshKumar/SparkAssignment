@@ -2,7 +2,6 @@ package com.credits
 
 import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
 import data._
-import data.GenerateData.getData
 import org.apache.spark.{SparkConf, sql}
 import org.apache.log4j.Logger
 import org.apache.spark.rdd.RDD
@@ -57,15 +56,15 @@ object Credits extends Serializable{
   }
 
   //data parallelize and readers
-  def getCreditsRddCaseClassSchema(spark: SparkSession): RDD[RecordCaseClassSchema] = spark.sparkContext.parallelize(getData(10)).map(row => RecordCaseClassSchema(row._1,row._2,row._3,row._4,row._5,row._6))
+  def getCreditsRddCaseClassSchema(spark: SparkSession): RDD[RecordCaseClassSchema] = spark.sparkContext.parallelize(SeqOfCaseClassData.generateData(10))
 
-  def getCreditsRddClassSchema(spark: SparkSession): RDD[RecordClassSchema] = spark.sparkContext.parallelize(getData(10)).map(row => new RecordClassSchema(row._1,row._2,row._3,row._4,row._5,row._6))
+  def getCreditsRddClassSchema(spark: SparkSession): RDD[RecordClassSchema] = spark.sparkContext.parallelize(SeqOfClassData.generateData(10))
 
-  def getCreditsDf(session: SparkSession): Dataset[Row] = session.sqlContext.createDataFrame(getData(10)).toDF("stateCode", "bankId", "areaName", "accountId", "creditScore", "hasCreditCard")
+  def getCreditsDf(session: SparkSession): DataFrame = session.sqlContext.createDataFrame(SeqOfCaseClassData.generateData(10)).toDF
 
   def getCreditsDs(session: SparkSession): Dataset[RecordCaseClassSchema] = {
     import session.implicits._
-    session.sqlContext.createDataFrame(getData(10)).toDF("stateCode", "bankId", "areaName", "accountId", "creditScore", "hasCreditCard").as[RecordCaseClassSchema]
+    session.sqlContext.createDataFrame(SeqOfCaseClassData.generateData(10)).toDF.as[RecordCaseClassSchema]
   }
 
   //utility functions
