@@ -11,3 +11,13 @@ object SeqOfTupleData {
     else generateData(n,count+1,data :+ (stateCode,bankId,randomName(6),accountId,randomScore(),yesOrNo()),bankId+1,accountId+1,stateCode+1)
   }
 }
+
+/*
+  columns list
+    1. bank id (id type - unique for each record)
+    2. area name (string type)
+    3. state code (id type - common for 100 dataset)
+    4. account id (id type - unique for each record)
+    5. account credit score (int type)
+    6. credit card (boolean type)
+*/
